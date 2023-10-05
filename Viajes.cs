@@ -34,7 +34,7 @@ namespace Remiseria
             vec[0] = tabla.Columns["viaje"];
             tabla.PrimaryKey = vec;
         }
-        public DataTable GetData()
+        public DataTable GetDataViajes()
         {
             return tabla;
         }

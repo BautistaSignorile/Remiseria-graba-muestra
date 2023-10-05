@@ -27,9 +27,9 @@ namespace Remiseria
         {
             oBarrio = new Barrio();
             oChofer = new Chofer();
-            tChofer = oChofer.GetData();
+            tChofer = oChofer.GetDataChofer();
             oViaje = new Viajes();
-            tViaje = oViaje.GetData();
+            tViaje = oViaje.GetDataViajes();
 
             listBox1.DisplayMember = "nombre";
             listBox1.ValueMember = "chofer";

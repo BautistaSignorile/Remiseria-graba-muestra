@@ -24,7 +24,7 @@ namespace Remiseria
         {
            oviaje = new Viajes();
            obarrio = new Barrio();
-            tviaje = oviaje.GetData();
+            tviaje = oviaje.GetDataViajes();
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)

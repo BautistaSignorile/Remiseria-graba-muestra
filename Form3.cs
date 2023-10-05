@@ -34,7 +34,7 @@ namespace Remiseria
         private void Form3_Load(object sender, EventArgs e)
         {
             viaje = new Viajes();
-            tviaje = viaje.GetData();
+            tviaje = viaje.GetDataViajes();
             Ochofer = new Chofer();
               
         }

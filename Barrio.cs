@@ -32,7 +32,6 @@ namespace Remiseria
             vec[0] = tabla.Columns["barrio"];
             tabla.PrimaryKey = vec;
         }
-
         public string nombreBarrio(int numeroBarrio)
         {
             DataRow fila = tabla.Rows.Find(numeroBarrio);
@@ -51,9 +50,41 @@ namespace Remiseria
             return barrios;
         }
 
-        public DataTable GetData()
+        public DataTable GetDataBarrio()
         {
             return tabla;
+        }
+
+        public bool grabar(int barrio, string nombre)
+        {
+            bool ok = true;
+
+            DataRow filaBuscada = tabla.Rows.Find(barrio);
+            if (filaBuscada == null)
+            {
+                foreach (DataRow fbar in tabla.Rows)
+                {
+                    if (fbar["nombre"].ToString() == nombre)
+                    {
+                        ok = false;
+                    }
+                }
+                if(ok = true)
+                {
+                    DataRow fila = tabla.NewRow();
+                    fila["barrio"] = barrio;
+                    fila["nombre"] = nombre;
+                    tabla.Rows.Add(fila);
+
+                    OleDbCommandBuilder cb = new OleDbCommandBuilder(adaptador);
+                    adaptador.Update(tabla);
+                }
+            }
+            else
+            {
+                ok = false;
+            }
+            return ok;
         }
     }
 }

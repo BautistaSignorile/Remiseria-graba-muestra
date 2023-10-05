@@ -22,7 +22,7 @@ namespace Remiseria
         private void Form7_Load(object sender, EventArgs e)
         {
             oviajes = new Viajes();
-            tviajes = oviajes.GetData();
+            tviajes = oviajes.GetDataViajes();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

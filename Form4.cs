@@ -22,8 +22,8 @@ namespace Remiseria
         {
             Chofer chofer = new Chofer();
             Viajes Viajes = new Viajes();
-            DataTable tChofer = chofer.GetData();
-            DataTable tViaje = Viajes.GetData();
+            DataTable tChofer = chofer.GetDataChofer();
+            DataTable tViaje = Viajes.GetDataViajes();
 
             foreach (DataRow filaChofer in tChofer.Rows)
             {

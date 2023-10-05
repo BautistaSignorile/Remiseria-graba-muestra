@@ -70,7 +70,7 @@ namespace Remiseria
                 return fila["nombre"].ToString();
             }
 
-            public DataTable GetData()
+            public DataTable GetDataChofer()
             {
                 return tabla;
             }
