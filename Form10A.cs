@@ -51,7 +51,7 @@ namespace Remiseria
             string BARRIO2 = "";
 
             datagridview1.Rows.Clear();
-            foreach(DataRow FViaje in datagridview1.Rows)
+            foreach(DataRow FViaje in tviaje.Rows)
             {
                 fecha = Convert.ToDateTime(FViaje["fecha"]);
                 AA = fecha.Year;
